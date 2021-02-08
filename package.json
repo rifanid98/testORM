@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "start": "nodemon testModel.js",
+    "migrate:all": "./node_modules/.bin/sequelize-cli db:migrate",
+    "migrate:undo": "./node_modules/.bin/sequelize-cli db:migrate:undo:all"
+  },
   "dependencies": {
     "dotenv": "^8.2.0",
     "pg": "^8.5.1",
@@ -10,6 +15,7 @@
     "sequelize-auto": "^0.7.10"
   },
   "devDependencies": {
+    "nodemon": "^2.0.7",
     "sequelize-cli": "^6.2.0"
   }
 }
