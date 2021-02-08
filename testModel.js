@@ -1,8 +1,8 @@
 const db = require("./db/models");
 const test = async () => {
-  const insert = await db.test_model.create({
-    firstName: "adnin",
-    lastName: "rifandi"
+  const insert = await db.Roles.create({
+    name: "admin",
+    is_admin: true
   })
   console.log(insert);
 }
